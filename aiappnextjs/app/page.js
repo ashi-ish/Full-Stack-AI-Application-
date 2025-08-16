@@ -44,7 +44,22 @@ export default function Home() {
         />
       </div>
       <div>
-        <button>{loading ? "Loading..." : "Chat"}</button>
+        <button
+          onClick={handleChat}
+          style={{ padding: "10px 20px", backgroundColor: "blue" }}
+        >
+          {loading ? "Loading..." : "Chat"}
+        </button>
+      </div>
+      <div
+        style={{
+          border: "1px solid #ccc",
+          padding: "10px",
+          whiteSpace: "pre-wrap",
+          fontSize: "28px",
+        }}
+      >
+        {response}
       </div>
     </div>
   );
